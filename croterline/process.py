@@ -1,10 +1,12 @@
 from multiprocessing import Process as _Process
 from typing import Callable, Any
 
+from mypy.nodes import TypeAlias
+
 from croterline.context import Context
 from croterline.utils import IsMainProcess
 
-type ProcessFuncType = Callable[[tuple[Any, ...], dict[str, Any]], None]
+ProcessFuncType: TypeAlias = Callable[[tuple[Any, ...], dict[str, Any]], None]
 
 _current_ctx: "Context | None" = None  # 注入当前进程上下文
 
@@ -49,6 +51,8 @@ def get_ctx() -> Context | None:
 
 
 def _wrapper(func: ProcessFuncType, ctx: Context, *args, **kwargs):
+    print("args", args)
+    print("kwargs", kwargs)
     global _current_ctx
 
     _current_ctx = ctx
