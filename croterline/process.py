@@ -51,8 +51,6 @@ def get_ctx() -> Context | None:
 
 
 def _wrapper(func: ProcessFuncType, ctx: Context, *args, **kwargs):
-    print("args", args)
-    print("kwargs", kwargs)
     global _current_ctx
 
     _current_ctx = ctx
