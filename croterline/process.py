@@ -13,7 +13,7 @@ _current_ctx: "Context | None" = None  # 注入当前进程上下文
 
 class SubProcess:
     def __init__(
-        self, name: str, func: ProcessFuncType, ctx: Context = Context, *args, **kwargs
+        self, name: str, func: ProcessFuncType, ctx: Context = Context(), *args, **kwargs
     ):
         self.name = name
         self.func = func
