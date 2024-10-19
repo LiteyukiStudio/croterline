@@ -1,7 +1,7 @@
 from multiprocessing import Process as _Process
 from typing import Callable, Any
 
-from mypy.nodes import TypeAlias
+from typing import TypeAlias
 
 from croterline.context import Context
 from croterline.utils import IsMainProcess
