@@ -6,7 +6,7 @@ authors = [
     {name = "snowykami", email = "snowykami@outlook.com"},
 ]
 dependencies = [
-    "magicoca>=1.0.1",
+    "magicoca>=1.0.6",
 ]
 requires-python = ">=3.10"
 readme = "README.md"
